@@ -8,7 +8,7 @@
     flex-direction: row;
     justify-content: space-around;
 
-    background-color: var(--blue2);
+    background-color: var(--blue1);
 }
 
 .student_header_container {
