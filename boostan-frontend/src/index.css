@@ -4,3 +4,6 @@
   --blue1: #9ED2C6;
   --blue2: #54BAB9;
 }
+body{
+  background-color: var(--cream1);
+}
