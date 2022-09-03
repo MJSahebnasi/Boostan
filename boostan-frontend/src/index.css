@@ -3,8 +3,10 @@
   --cream2: #E9DAC1;
   --blue1: #9ED2C6;
   --blue2: #54BAB9;
-  --red: #C21010;
+  --red1: #C21010;
+  --red2: #a90c0c;
 }
 body{
   background-color: var(--cream1);
+  margin: 0;
 }
