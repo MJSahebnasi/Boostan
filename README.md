@@ -1,2 +1,2 @@
 # Boostan
-a platform for university courses pre-registration and more
+a platform for university course pre-registration
