@@ -1,4 +1,5 @@
 import React from 'react';
+import StudentBookClass from './StudentBookClass';
 
 // import { Link } from 'react-router-dom';
 // import { useDispatch, useSelector } from "react-redux";
@@ -14,6 +15,7 @@ function StudentPage(props) {
     return (
         <div>
             <StudentHeader />
+            <StudentBookClass />
         </div>
     );
 

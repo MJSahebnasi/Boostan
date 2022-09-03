@@ -22,8 +22,8 @@ function StudentHeader() {
     // }
 
     return (
-        <div className="navbar">
-            <div className="navbar_container">
+        <div className="student_header">
+            <div className="student_header_container">
                 {/* <Link className='menu_nutton_link' to={"/"}><h3>All Products</h3></Link>
                 <Link className='menu_nutton_link' to={"/Smartphones"}><h3>Smartphones</h3></Link>
                 <Link className='menu_nutton_link' to={"/Notebooks"}><h3>Notebooks</h3></Link> */}
