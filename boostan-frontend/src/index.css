@@ -3,6 +3,7 @@
   --cream2: #E9DAC1;
   --blue1: #9ED2C6;
   --blue2: #54BAB9;
+  --red: #C21010;
 }
 body{
   background-color: var(--cream1);
