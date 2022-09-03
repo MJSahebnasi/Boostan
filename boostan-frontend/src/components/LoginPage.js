@@ -45,8 +45,8 @@ function LoginPage(props) {
                     </div>
                     <form>
                         <div className='loginpage_form'>
-                            <input id='login_username' type={'text'} placeholder={'نام کاربری'} required />
-                            <input id='login_password' type={'password'} placeholder={'رمز عبور'} required />
+                            <input id='login_username' type={'text'} placeholder={'نام کاربری / شماره دانشجویی'} required />
+                            <input id='login_password' type={'password'} placeholder={' رمز عبور / کد ملی'} required />
                             <select id='signup_type_select' required>
                                 <option value="" disabled selected> ورود به عنوان </option>
                                 <option value="user">دانشجو</option>
