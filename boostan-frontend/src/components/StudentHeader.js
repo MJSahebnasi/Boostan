@@ -28,7 +28,8 @@ function StudentHeader() {
                 <Link className='menu_nutton_link' to={"/Smartphones"}><h3>Smartphones</h3></Link>
                 <Link className='menu_nutton_link' to={"/Notebooks"}><h3>Notebooks</h3></Link> */}
 
-                <h3>کلاس ها</h3>
+                <h3>رزرو کلاس</h3>
+                <h3>برنامه من</h3>
                 <h3>آمار ترم های قبل</h3>
                 <h3>نظرات دانشجویان</h3>
 
