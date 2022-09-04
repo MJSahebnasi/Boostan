@@ -1,4 +1,6 @@
 import React from 'react';
+import StudentClassCard from './StudentClassCard';
+
 // import { Link } from 'react-router-dom';
 // import { useSelector } from "react-redux";
 
@@ -28,8 +30,53 @@ function StudentBookClass() {
             </div>
 
             <div className='class_container'>
+                <StudentClassCard
+                    course_name={'مبانی طراحی سیستم های دیجیتال'}
+                    instructor_name={'علی جهانیان'}
+                    class_code={1234002}
+                    class_capacity={50}
+                    registered={50}
+                    in_queue={12}
+                />
+
+                <StudentClassCard
+                    course_name={'برنامه نویسی پیشرفته'}
+                    instructor_name={'صادق علی اکبری'}
+                    class_code={1234003}
+                    class_capacity={50}
+                    registered={40}
+                    in_queue={0}
+                />
+
+                <StudentClassCard
+                    course_name={'مبانی طراحی سیستم های دیجیتال'}
+                    instructor_name={'علی جهانیان'}
+                    class_code={1234002}
+                    class_capacity={50}
+                    registered={50}
+                    in_queue={12}
+                />
+
+                <StudentClassCard
+                    course_name={'برنامه نویسی پیشرفته'}
+                    instructor_name={'صادق علی اکبری'}
+                    class_code={1234003}
+                    class_capacity={50}
+                    registered={40}
+                    in_queue={0}
+                />
+
+                <StudentClassCard
+                    course_name={'مبانی طراحی سیستم های دیجیتال'}
+                    instructor_name={'علی جهانیان'}
+                    class_code={1234002}
+                    class_capacity={50}
+                    registered={50}
+                    in_queue={12}
+                />
 
             </div>
+
         </div>
     );
 

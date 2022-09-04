@@ -5,8 +5,12 @@
   --blue2: #54BAB9;
   --red1: #C21010;
   --red2: #a90c0c;
+  --button_blue1: #3ec4e6;
+  --button_blue2: #24a8c9;
 }
 body{
   background-color: var(--cream1);
   margin: 0;
+
+  direction: rtl;
 }
