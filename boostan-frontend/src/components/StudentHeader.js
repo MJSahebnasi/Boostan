@@ -1,37 +1,16 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // import { useSelector } from "react-redux";
 
 function StudentHeader() {
 
-    // const cartItems = useSelector((state) => state.cart.items);
-
-    // if (cartItems.length === 0) {
-    //     return (
-    //         <div className="navbar">
-    //             <div className="container">
-    //                 <Link className='menu_nutton_link' to={"/"}><h3>All Products</h3></Link>
-    //                 <Link className='menu_nutton_link' to={"/Smartphones"}><h3>Smartphones</h3></Link>
-    //                 <Link className='menu_nutton_link' to={"/Notebooks"}><h3>Notebooks</h3></Link>
-    //                 <div>
-    //                     <Link id='cartLink' to={"/cart"}><button type="button" className="cart_button">Cart</button></Link>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     );
-    // }
-
     return (
         <div className="student_header">
             <div className="student_header_container">
-                {/* <Link className='menu_nutton_link' to={"/"}><h3>All Products</h3></Link>
-                <Link className='menu_nutton_link' to={"/Smartphones"}><h3>Smartphones</h3></Link>
-                <Link className='menu_nutton_link' to={"/Notebooks"}><h3>Notebooks</h3></Link> */}
-
-                <h3>رزرو کلاس</h3>
-                <h3>برنامه من</h3>
-                <h3>آمار ترم های قبل</h3>
-                <h3>نظرات دانشجویان</h3>
+                <Link className='menu_nutton_link' to={"/StudentPage/register"}><h3>ثبت نام کلاس</h3></Link>
+                <Link className='menu_nutton_link' to={"/StudentPage/my_classes"}><h3>کلاس های من</h3></Link>
+                <Link className='menu_nutton_link' to={"/StudentPage/prev_semesters"}><h3>آمار ترم های قبل</h3></Link>
+                <Link className='menu_nutton_link' to={"/StudentPage/reviews"}><h3>نظرات دانشجویان</h3></Link>
 
                 <div>
                     {/* <Link id='cartLink' to={"/cart"}><button type="button" className="cart_button">Cart</button></Link> */}
