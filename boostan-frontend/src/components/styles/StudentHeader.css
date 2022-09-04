@@ -4,6 +4,8 @@
 
     direction: rtl;
 
+    /* border: 1px solid; */
+
     display: inline-flex;
     flex-direction: row;
     justify-content: space-around;
@@ -14,9 +16,16 @@
 .student_header_container {
     /* background-color: red; */
 
+    width: 90%;
+
     display: inline-flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.menue_buttons_div{
+    display: flex;
+    flex-direction: row;
 }
 
 .cart_button {
@@ -52,7 +61,7 @@
     /* border:1px solid; */
     cursor: pointer;
     margin-left: 40px;
-    color: white;
+    /* color: white; */
     /* border-radius:7px; */
 }
 
