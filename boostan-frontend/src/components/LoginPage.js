@@ -1,8 +1,8 @@
 import React from 'react';
-// import { useDispatch } from "react-redux";
-// import { login } from "../redux/UserInfo";
-// import { useSelector } from "react-redux";
-// import { Link, Navigate } from 'react-router-dom';
+import { useDispatch } from "react-redux";
+import { login } from "../redux/UserInfo";
+import { useSelector } from "react-redux";
+import { Link, Navigate } from 'react-router-dom';
 // import { send_request } from '../send_request';
 
 // async function loginpage_button(method, url, body, my_dispatch) {
@@ -29,12 +29,12 @@ import React from 'react';
 
 function LoginPage(props) {
 
-    // const my_dispatch = useDispatch();
+    const my_dispatch = useDispatch();
 
-    // const user_info = useSelector((state) => state.UserInfo);
-    // if (user_info.user_type)
-    //     // already loged in
-    //     return (<Navigate to="/profile" />);
+    const user_info = useSelector((state) => state.UserInfo);
+    if (user_info.user_type)
+        // already loged in
+        return (<Navigate to="/StudentPage/register" />);
 
     return (
         <div className="LoginPage_container">

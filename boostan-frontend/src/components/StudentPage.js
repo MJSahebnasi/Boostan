@@ -1,6 +1,6 @@
 import React from 'react';
 // import { useState } from 'react';
-// import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import StudentBookClass from './StudentBookClass';
 import StudentHeader from './StudentHeader';
@@ -13,6 +13,10 @@ function StudentPage(props) {
 
     // console.log('------------')
     // console.log(props.tab);
+
+    const user_info = useSelector((state) => state.UserInfo);
+    console.log('------------');
+    console.log(user_info);
 
     if (props.tab === 'register')
         return (
