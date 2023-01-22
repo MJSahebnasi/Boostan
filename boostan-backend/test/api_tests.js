@@ -39,9 +39,12 @@ describe('POST preregister - test #1 - successfull registeration',()=>{
             .post('/preregister')
             .send(payload)
 
+        console.log(response.body)
+        console.log(typeof response.body)
+
         expect(response.status).to.equal(200);
-        expect(response.body).to.be.an.instanceof(String);
-        expect(response.body).to.be("true");
+        expect(response.body).to.be.an.instanceof(boolean);
+        expect(response.body).to.be(true);
     })
 })
 
@@ -53,8 +56,8 @@ describe('POST preregister - test #2 - fail: already registered',()=>{
             .send(payload)
 
         expect(response.status).to.equal(403);
-        expect(response.body).to.be.an.instanceof(String);
-        expect(response.body).to.be("false");
+        expect(response.body).to.be.an.instanceof(boolean);
+        expect(response.body).to.be(false);
     })
 })
 
