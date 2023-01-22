@@ -24,7 +24,7 @@ describe('GET my_courses - test #1 - not empty array',()=>{
 
 describe('GET my_courses - test #2 - empty array',()=>{
     it('GET /my_courses/ returns an array of a student\'s registered courses',async()=>{
-        const response= await request(server).get('/preregister/12341451111');
+        const response= await request(server).get('/my_courses/12341451111');
 
         expect(response.status).to.equal(200);
         expect(response.body).to.be.an.instanceof(Array);
@@ -52,7 +52,7 @@ describe('POST preregister - test #2 - fail: already registered',()=>{
             .post('/preregister')
             .send(payload)
 
-        expect(response.status).to.equal(200);
+        expect(response.status).to.equal(403);
         expect(response.body).to.be.an.instanceof(Boolean);
         expect(response.body).to.be(false);
     })
