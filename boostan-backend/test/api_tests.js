@@ -11,7 +11,7 @@ describe('get all_courses',()=>{
     })
 });
 
-describe('get my_courses',()=>{
+describe('get my_courses - test #1 - not empty array',()=>{
     it('GET /my_courses/ returns an array of a student\'s registered courses',async()=>{
         const response= await request(server).get('/my_courses/972401');
 
@@ -19,5 +19,15 @@ describe('get my_courses',()=>{
         expect(response.body).to.be.an.instanceof(Array);
         (response.body).forEach(crs => {expect(crs).to.have.property('registerars')});
         (response.body).forEach(crs => {expect(crs.registerars).to.contain('972401')});
+    })
+})
+
+describe('get my_courses - test #2 - empty array',()=>{
+    it('GET /my_courses/ returns an array of a student\'s registered courses',async()=>{
+        const response= await request(server).get('/my_courses/12341451111');
+
+        expect(response.status).to.equal(200);
+        expect(response.body).to.be.an.instanceof(Array);
+        expect(response.body).to.be.empty();
     })
 })
