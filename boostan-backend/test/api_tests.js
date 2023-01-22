@@ -41,7 +41,7 @@ describe('POST preregister - test #1 - successfull registeration',()=>{
 
         expect(response.status).to.equal(200);
         expect(response.body).to.be.an.instanceof(Boolean);
-        expect(response.body).to.be(true);
+        expect(response.body).to.be("true");
     })
 })
 
@@ -54,7 +54,7 @@ describe('POST preregister - test #2 - fail: already registered',()=>{
 
         expect(response.status).to.equal(403);
         expect(response.body).to.be.an.instanceof(Boolean);
-        expect(response.body).to.be(false);
+        expect(response.body).to.be("false");
     })
 })
 
