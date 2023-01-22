@@ -43,7 +43,6 @@ describe('POST preregister - test #1 - successfull registeration',()=>{
         console.log(typeof response.body)
 
         expect(response.status).to.equal(200);
-        // expect(response.body).to.be.a('boolean');
         expect(response.body).to.be.true;
     })
 })
@@ -56,7 +55,6 @@ describe('POST preregister - test #2 - fail: already registered',()=>{
             .send(payload)
 
         expect(response.status).to.equal(403);
-        // expect(response.body).to.be.a(boolean);
         expect(response.body).to.be.false;
     })
 })
