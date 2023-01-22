@@ -28,6 +28,7 @@ describe('get my_courses - test #2 - empty array',()=>{
 
         expect(response.status).to.equal(200);
         expect(response.body).to.be.an.instanceof(Array);
-        expect(response.body).to.be.empty();
+        expect(response.body).to.be.empty;
     })
 })
+
