@@ -1,23 +1,21 @@
 const express = require('express')
 const mongoose = require('mongoose')
 
-//import  bodyParser from 'body-parser';
 const get_all_courses_router = require('./routes/all_available_courses')
 const get_my_courses_router = require('./routes/my_courses')
+const post_preregister = require('./routes/register')
 
 const app = express()
 app.use(express.json())
 
-// app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(bodyParser.json());
 app.use('/all_courses/', get_all_courses_router);
 app.use('/my_courses/', get_my_courses_router);
+app.use('/preregister/', post_preregister);
 
 mongoose.connect("mongodb://localhost:27017/boostan", {
   useNewUrlParser: true
 });
 
-// callback when connection to mongodb is open
 mongoose.connection.once("open", function() {
   console.log("MongoDB database connection established successfully");
 });
