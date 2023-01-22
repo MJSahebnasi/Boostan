@@ -5,7 +5,8 @@ let course = new mongoose.Schema({
     code:String,
     instructor:String,
     capacity:Number,
-    registered:Number
+    registered:Number,
+    registerars:Array
 })
 
 
