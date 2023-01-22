@@ -13,10 +13,11 @@ describe('get all_courses',()=>{
 
 describe('get my_courses',()=>{
     it('GET /my_courses/ returns an array of a student\'s registered courses',async()=>{
-        const response= await request(server).get('/all_courses/', '972401');
-        expect(response.status).to.equal(200)
-        expect(response.body).to.be.an.instanceof(Array)
-        expect(response.body).to.have.key('registerars')
-        response.body.foreach(course => expect(course.registerars).to.contain('972401'))
+        const response= await request(server).get('/my_courses/972401');
+
+        expect(response.status).to.equal(200);
+        expect(response.body).to.be.an.instanceof(Array);
+        (response.body).forEach(crs => {expect(crs).to.have.property('registerars')});
+        (response.body).forEach(crs => {expect(crs.registerars).to.contain('972401')});
     })
 })
