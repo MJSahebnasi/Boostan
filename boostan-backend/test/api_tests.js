@@ -17,6 +17,6 @@ describe('get my_courses',()=>{
         expect(response.status).to.equal(200)
         expect(response.body).to.be.an.instanceof(Array)
         expect(response.body).to.have.key('registerars')
-        expect(response.body.registerars).to.contain('972401')
+        response.body.foreach(course => expect(course.registerars).to.contain('972401'))
     })
 })
