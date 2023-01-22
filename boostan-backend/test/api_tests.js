@@ -34,7 +34,7 @@ describe('GET my_courses - test #2 - empty array',()=>{
 
 describe('POST preregister - test #1 - successfull registeration',()=>{
     it('POST /preregister/ returns a boolean: success',async()=>{
-        const payload = {std_id: '972401', course_code: '10002'}
+        const payload = {std_id: Date.now(), course_code: '10002'}
         const response = await request(server)
             .post('/preregister')
             .send(payload)
