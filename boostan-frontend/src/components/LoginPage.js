@@ -54,7 +54,7 @@ function LoginPage(props) {
                             </select>
                         </div>
                         <div className='loginpage_button_div'>
-                            <button type='button'
+                            <Link to={"/StudentPage/register"}><button type='button'
                                 // onClick={async () => await loginpage_button("POST", 'auth/login/all'
                                 // , JSON.stringify({
                                 //     username: document.getElementById("login_username").value
@@ -62,7 +62,7 @@ function LoginPage(props) {
                                 // }), my_dispatch)}
                                 id='login_button'>
                                 ورود
-                            </button>
+                            </button></Link>
                         </div>
                     </form>
                 </div>

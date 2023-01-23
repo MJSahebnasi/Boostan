@@ -1,27 +1,35 @@
 import React from 'react';
 import StudentClassCard from './StudentClassCard';
+import { send_request } from '../send_request';
 
 // import { Link } from 'react-router-dom';
 // import { useSelector } from "react-redux";
 
+async function get_all_courses(method, url){
+    try {
+        const res = await send_request(method, url);
+        return res;
+    }
+    catch (e) {
+        console.log('student main page - getting all courses: oops ...');
+    }
+}
+
 function StudentBookClass() {
+    let courses_raw = get_all_courses("GET", "all_courses")
+    console.log('----$$$$----')
+    console.log(courses_raw)
+    console.log('----$$$$----')
+    let course_components = []
+    for (var i = 0; i < courses_raw.length; i++) {
+        let crs = courses_raw[i];
 
-    // const cartItems = useSelector((state) => state.cart.items);
+        console.log('---$$----')
+        console.log(crs)
+        console.log(typeof crs)
 
-    // if (cartItems.length === 0) {
-    //     return (
-    //         <div className="navbar">
-    //             <div className="container">
-    //                 <Link className='menu_nutton_link' to={"/"}><h3>All Products</h3></Link>
-    //                 <Link className='menu_nutton_link' to={"/Smartphones"}><h3>Smartphones</h3></Link>
-    //                 <Link className='menu_nutton_link' to={"/Notebooks"}><h3>Notebooks</h3></Link>
-    //                 <div>
-    //                     <Link id='cartLink' to={"/cart"}><button type="button" className="cart_button">Cart</button></Link>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     );
-    // }
+        course_components.push(<StudentClassCard key={i} course_name={crs.name} />);
+    };
 
     return (
         <div className="bookclass_body">
