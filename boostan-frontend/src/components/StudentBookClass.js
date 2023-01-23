@@ -1,6 +1,8 @@
 import React from 'react';
 import StudentClassCard from './StudentClassCard';
 import { send_request } from '../send_request';
+import { useState, useEffect } from 'react';
+
 
 // import { Link } from 'react-router-dom';
 // import { useSelector } from "react-redux";
@@ -8,7 +10,11 @@ import { send_request } from '../send_request';
 async function get_all_courses(method, url){
     try {
         const res = await send_request(method, url);
-        return res;
+        const res_obj = await res.json()
+        console.log('-----get_all_courses-----')
+        console.log(res_obj)
+        console.log('-------------------------')
+        return res_obj;
     }
     catch (e) {
         console.log('student main page - getting all courses: oops ...');
@@ -16,13 +22,15 @@ async function get_all_courses(method, url){
 }
 
 function StudentBookClass() {
-    let courses_raw = get_all_courses("GET", "all_courses")
-    console.log('----$$$$----')
-    console.log(courses_raw)
-    console.log('----$$$$----')
+    let courses = get_all_courses("GET", "/all_courses")
+
+    console.log('----courses_raw----')
+    console.log(courses)
+    console.log('-------------------')
+
     let course_components = []
-    for (var i = 0; i < courses_raw.length; i++) {
-        let crs = courses_raw[i];
+    for (var i = 0; i < courses.length; i++) {
+        let crs = courses[i];
 
         console.log('---$$----')
         console.log(crs)
@@ -38,6 +46,9 @@ function StudentBookClass() {
             </div>
 
             <div className='class_container'>
+
+                {/* {course_components} */}
+
                 <StudentClassCard
                     course_name={'مبانی طراحی سیستم های دیجیتال'}
                     instructor_name={'علی جهانیان'}
